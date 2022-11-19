@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-  int opsi,i,app,kalkulator,luas2d,power = 1;
-  float suhu,celcius,result,fahrenheit,reamur;
+  int opsi,i,app,luas2d,power = 1;
+  float suhu,celcius,result,fahrenheit,reamur,kalkulator,bil1,bil2;
   string a,b;
   
 	while(power==1) {
@@ -77,7 +77,7 @@ int main()
 			    	i=1;
 			    	a = "`F = ";
 			    	b = "`R";
-			    	result = (suhu − 32) * 4.0⁄9.0; 
+			    	result = (suhu - 32) * 4.0/9.0; 
 					}
 					// R to C
 					else if(opsi == 5) {
@@ -93,8 +93,9 @@ int main()
 			    	i=1;
 			    	a = "`R = ";
 			    	b = "`F";
-			    	result = (suhu*9.0⁄4.0) + 32;
+			    	result = (suhu*9.0/4.0) + 32;
 					}
+					// Exit
 					else if(opsi == 7) {
 						loop1=0;
 					}					
@@ -102,7 +103,67 @@ int main()
 			}	
 			
 			else if (app == 2) {
-				cout << "app bernilai 2";
+				int loop2 = 1;
+				while(loop2 == 1) {
+					system("cls");
+			    cout << "+------------------------------+\n";
+			    cout << "| Pilih Operasi Perhitungan    |\n";
+			    cout << "+------------------------------+\n";
+			    cout << "| 1. Penjumlahan               |\n";
+			    cout << "| 2. Pengurangan               |\n";
+			    cout << "| 3. Perkalian                 |\n";
+			    cout << "| 4. Pembagian                 |\n";
+			    cout << "| 5. Exit                      |\n";
+			    cout << "+------------------------------+\n\n";
+			    
+			    if(i==1){
+			    	cout << bil1 << a << bil2 << b << result <<endl;;
+					}
+					
+					cout << "input: ";cin >> opsi;
+					
+					// Penjumlahan
+					if(opsi == 1){
+						i = 1;
+						cout << "masukkan bilangan pertama: ";cin >> bil1;
+						cout << "masukkan bilangan kedua  : ";cin >> bil2;
+						result = bil1 + bil2;
+						a = " + "; b = " = ";
+					}
+					
+					// Pengurangan
+					if(opsi == 2){
+						i = 1;
+						cout << "masukkan bilangan pertama: ";cin >> bil1;
+						cout << "masukkan bilangan kedua  : ";cin >> bil2;
+						result = bil1 - bil2;
+						a = " - "; b = " = ";
+					}
+					
+					// Perkalian
+					if(opsi == 3){
+						i = 1;
+						cout << "masukkan bilangan pertama: ";cin >> bil1;
+						cout << "masukkan bilangan kedua  : ";cin >> bil2;
+						result = bil1 * bil2;
+						a = " x "; b = " = ";
+					}
+					
+					// Pembagian
+					if(opsi == 4){
+						i = 1;
+						cout << "masukkan bilangan pertama: ";cin >> bil1;
+						cout << "masukkan bilangan kedua  : ";cin >> bil2;
+						result = bil1 / bil2;
+						a = " : "; b = " = ";
+					}
+					
+					// Exit
+					if(opsi == 5){
+						loop2 = 0;
+					}
+				}
+				
 			}
 		} else {
 			cout << "Input yang anda masukkan salah!";
