@@ -7,7 +7,7 @@ int main()
 {
   int opsi,i,app,luas2d,power = 1;
   float suhu,celcius,result,fahrenheit,reamur,kalkulator,bil1,bil2;
-  string a,b;
+  string a,b,c;
   
 	while(power==1) {
 		system("cls");
@@ -102,6 +102,7 @@ int main()
 		  	}
 			}	
 			
+			// jika app bernilai 2
 			else if (app == 2) {
 				int loop2 = 1;
 				while(loop2 == 1) {
@@ -163,7 +164,50 @@ int main()
 						loop2 = 0;
 					}
 				}
-				
+			}
+			
+			// jika app bernilai 3
+			else if (app == 3) {
+				int loop3 = 1;
+				int sisi;
+				do {
+					system("cls");
+					cout << "=====================================\n";
+					cout << "[+]   Program Luas Bangun Datar   [+]\n";
+					cout << "=====================================\n";
+					cout << "[+]   1. Persegi                  [+]\n";
+					cout << "[+]   2. Persegi Panjang          [+]\n";
+					cout << "[+]   3. Segitiga                 [+]\n";
+					cout << "[+]   4. Jajar Genjang            [+]\n";
+					cout << "[+]   5. Trapesium                [+]\n";
+					cout << "[+]   6. Belah Ketupat            [+]\n";
+					cout << "[+]   7. Lingkaran                [+]\n";
+					cout << "[+]   8. Segi Enam                [+]\n";
+					cout << "[+]   9. Exit                     [+]\n";
+					cout << "=====================================\n\n";
+					
+					if(i==1) {
+						cout << a << b << sisi << c << result << "\n\n";
+					}
+					
+					cout << "Input: ";cin>>opsi;
+					
+					// persegi
+					if(opsi == 1) {
+						i = 1;
+						cout << "masukkan sisi: ";cin>>sisi;
+						result = sisi * sisi;
+						a = " rumus persegi [ sisi x sisi ]\n";
+						b = " luas persegi dengan sisi ";
+						c = " adalah: ";
+					}
+				}
+				while(loop3 == 1);
+			}
+			
+			// jika app bernilai 4
+			else if (app == 4) {
+				power = 0;
 			}
 		} else {
 			cout << "Input yang anda masukkan salah!";
