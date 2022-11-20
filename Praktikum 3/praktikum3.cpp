@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
   int opsi,i,app,luas2d,power = 1;
-  float suhu,celcius,result,fahrenheit,reamur,kalkulator,bil1,bil2;
-  string a,b,c;
+  float suhu,celcius,result,fahrenheit,reamur,kalkulator,bil1,bil2,sisi,panjang,lebar,tinggi,alas,sisisejajar,d1,d2,r,c;
+	string a,b;
   
 	while(power==1) {
 		system("cls");
@@ -24,7 +24,7 @@ int main()
     if( app==1 || app == 2 || app == 3 || app ==4 )
     {
 			
-			// jika app bernilai 1				
+			// jika app bernilai 1 [konversi suhu]
 	    if(app == 1) {
 	    	int loop1 = 1;
 	    	while(loop1 == 1){
@@ -102,7 +102,7 @@ int main()
 		  	}
 			}	
 			
-			// jika app bernilai 2
+			// jika app bernilai 2 [kalkulator]
 			else if (app == 2) {
 				int loop2 = 1;
 				while(loop2 == 1) {
@@ -166,10 +166,9 @@ int main()
 				}
 			}
 			
-			// jika app bernilai 3
+			// jika app bernilai 3 [luas badngun 2D]
 			else if (app == 3) {
 				int loop3 = 1;
-				int sisi;
 				do {
 					system("cls");
 					cout << "=====================================\n";
@@ -182,12 +181,11 @@ int main()
 					cout << "[+]   5. Trapesium                [+]\n";
 					cout << "[+]   6. Belah Ketupat            [+]\n";
 					cout << "[+]   7. Lingkaran                [+]\n";
-					cout << "[+]   8. Segi Enam                [+]\n";
-					cout << "[+]   9. Exit                     [+]\n";
+					cout << "[+]   8. Exit                     [+]\n";
 					cout << "=====================================\n\n";
 					
 					if(i==1) {
-						cout << a << b << sisi << c << result << "\n\n";
+						cout << a << b << c << "\n\n";
 					}
 					
 					cout << "Input: ";cin>>opsi;
@@ -196,10 +194,73 @@ int main()
 					if(opsi == 1) {
 						i = 1;
 						cout << "masukkan sisi: ";cin>>sisi;
-						result = sisi * sisi;
-						a = " rumus persegi [ sisi x sisi ]\n";
-						b = " luas persegi dengan sisi ";
-						c = " adalah: ";
+						a = " [ sisi x sisi ]\n";
+						b = " luas persegi adalah ";
+						c = sisi * sisi;
+					}
+
+					// persegi panjang
+					if(opsi == 2) {
+						i = 1;
+						cout << "masukkan panjang: ";cin>>panjang;
+						cout << "masukkan lebar  : ";cin>>lebar;
+						a = " [ panjang x lebar ]\n";
+						b = " luas persegi panjang adalah ";
+						c = panjang * lebar;
+						}
+					
+					// segitiga
+					if(opsi == 3) {
+						i = 1;
+						cout << "masukkan alas  : ";cin>>alas;
+						cout << "masukkan tinggi: ";cin>>tinggi;
+						a = " [ alas x tinggi x 0.5 ]\n";
+						b = " luas segitiga adalah ";
+						c = (alas*tinggi)*0.5;
+					}
+					
+					// jajar genjang
+					if(opsi == 4) {
+						i = 1;
+						cout << "masukkan alas  : ";cin>>alas;
+						cout << "masukkan tinggi: ";cin>>tinggi;
+						a = " [ alas x tinggi x 0.5 ]\n";
+						b = " luas jajar genjang adalah ";
+						c = alas*tinggi;
+						}
+					
+					// trapesium
+					if(opsi == 5) {
+						i = 1;
+						cout << "masukkan sisi sejajar: ";cin>>sisisejajar;
+						cout << "masukkan tinggi      : ";cin>>tinggi;
+						a = " [ 0.5 x jumlah panjang sisi sejajar x tinggi ]\n";
+						b = " luas trapesium adalah ";
+						c = (sisisejajar * tinggi)*0.5;
+						}
+					
+					// belah ketupat
+					if(opsi == 6) {
+						i = 1;
+						cout << "masukkan diagonal 1: ";cin>>d1;
+						cout << "masukkan diagonal 2: ";cin>>d2;
+						a = " [ 0.5 x diagonal 1 x diagonal 2 ]\n";
+						b = " luas belah ketupat adalah ";
+						c = d1*d2*0.5;
+						}
+					
+					// lingkaran
+					if(opsi == 7) {
+						i = 1;
+						cout << "masukkan jari-jari: ";cin>>r;
+						a = " [ phi x r^2 ]\n";
+						b = " luas lingkaran adalah ";
+						c = 22/7*r*r;
+						}
+					
+					// exit
+					if(opsi == 8) {
+						loop3 = 0;
 					}
 				}
 				while(loop3 == 1);
