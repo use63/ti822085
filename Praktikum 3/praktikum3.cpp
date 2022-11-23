@@ -265,7 +265,7 @@ int main()
 				}
 				while(loop3 == 1);
 			}
-			
+
 			// jika app bernilai 4
 			else if (app == 4) {
 				power = 0;
