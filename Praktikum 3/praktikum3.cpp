@@ -1,3 +1,8 @@
+/* 
+  https://github.com/use63
+  v1 | 23-11-2011
+*/
+
 #include <iostream>
 #include <stdlib.h>
 
